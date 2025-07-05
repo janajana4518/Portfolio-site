@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f7f7;
+  color: #4a4a4a;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Links */
+a {
+  color: #d97769;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #bf5f45;
+}
+
+/* Header */
+header {
+  background-color: #ffe6e6;
+  padding: 5px 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.logo {
+  font-size: 40px;
+  font-weight: 900;
+  color: #bf5f45;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.navbar a {
+  font-weight: 600;
+  font-size: 30px;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+.navbar a.active,
+.navbar a:hover {
+  background-color: #ffd9d9;
+  color: #a03f2c;
+}
+
+/* About Section */
+.about-section {
+  background-color: #e8f0f8;
+  padding: 60px 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(191, 95, 69, 0.1);
+  text-align: left;
+  color: #3b3b3b;
+}
+.about-section h2 {
+  font-size: 34px;
+  margin-bottom: 5px;
+  color: #bf5f45;
+}
+.about-section p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(to right, #fef6f0, #e6f0ff);
+  position: relative;
+  overflow: hidden;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.hero-image img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.hero-text {
+  text-align: left;
+}
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+.role {
+  font-size: 1.5rem;
+  color: #ff6f91;
+  font-weight: bold;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: #ffdde2;
+  border-radius: 50%;
+  z-index: 0;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 350px;
+  height: 350px;
+  background: #d0e6ff;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 60px;
+  font-size: 14px;
+  color: #7a7a7a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-image img {
+    width: 200px;
+  }
+}
